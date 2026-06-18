@@ -22,6 +22,26 @@
   .tier li{font-size:.9rem;color:var(--dim);padding-left:1.3rem;position:relative}
   .tier li::before{content:"+";position:absolute;left:0;color:var(--gold);font-weight:700}
   .tier .btn{width:100%;justify-content:center}
+
+  /* parallel thought-streams canvas sits behind everything; glass refracts it */
+  #thought-streams{position:fixed;inset:0;z-index:-2;pointer-events:none}
+  .aura{z-index:-3}                 /* ambient glow drops behind the streams */
+
+  /* dark-black header bar (not the translucent glass treatment) */
+  .nav.glass{
+    background:linear-gradient(180deg,#050608 0%,#04050a 100%);
+    -webkit-backdrop-filter:saturate(150%) blur(14px);
+    backdrop-filter:saturate(150%) blur(14px);
+    border:1px solid rgba(255,255,255,.06);
+    box-shadow:0 10px 34px -14px rgba(0,0,0,.85),inset 0 1px 0 0 rgba(255,255,255,.04);
+  }
+  .nav.glass::before{display:none}   /* kill the liquid sheen streak on the bar */
+  .nav .wm-crowe{color:#f4f1ea}
+
+  /* render fidelity: crisper glass + type on the page */
+  body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+  .glass{box-shadow:var(--spec),0 2px 10px rgba(0,0,0,.45),0 24px 56px -28px rgba(0,0,0,.8),inset 0 0 0 1px rgba(210,173,98,.06)}
+
   @media(max-width:820px){ .caps{grid-template-columns:1fr} }
 </style>
 </head>
@@ -106,6 +126,7 @@
   <div style="color:var(--faint)"><a href="https://www.crowelogic.com" style="color:var(--dim);text-decoration:none">crowelogic.com</a> &nbsp; <span class="wm-dp" style="font-size:.85rem"><span class="lo">deep</span><span class="hi">parallel</span></span></div>
 </footer>
 
+<script src="./thought-streams.js"></script>
 <script src="./recorded-terminal.js"></script>
 <script>
   const io = new IntersectionObserver((es) => {

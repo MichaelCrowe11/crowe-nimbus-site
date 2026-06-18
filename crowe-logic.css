@@ -115,8 +115,13 @@ p{color:var(--dim);margin:0 0 1rem}
 /* wordmarks */
 .wm-crowe{font:500 1.15rem var(--serif);color:var(--ink);letter-spacing:-.01em}
 .wm-crowe::after{content:" \25C6";color:var(--gold);font-size:.7em;vertical-align:.08em}
-.wm-dp{font:600 1.05rem var(--mono);letter-spacing:-.02em}
-.wm-dp .lo{color:var(--ink)} .wm-dp .hi{color:var(--gold)}
+/* DeepParallel wordmark: premium product mark, not a code token.
+   Tight optical sans, two-weight contrast, gold gradient on "parallel". */
+.wm-dp{font:700 1.12rem var(--sans);letter-spacing:-.045em;font-optical-sizing:auto;
+  display:inline-flex;align-items:baseline;white-space:nowrap}
+.wm-dp .lo{color:var(--ink);font-weight:500}
+.wm-dp .hi{font-weight:700;background:linear-gradient(174deg,var(--gold-2) 10%,var(--gold) 70%,var(--gold-dim));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* ---- 8. Components ------------------------------------------------------- */
 /* Floating nav */
