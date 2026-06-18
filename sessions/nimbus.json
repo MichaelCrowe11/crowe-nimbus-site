@@ -1,0 +1,18 @@
+{
+  "title": "crowe nimbus  ·  provision",
+  "badge": "endpoint live",
+  "badge_kind": "ok",
+  "events": [
+    { "type": "cmd",     "text": "nimbus up --model crowelm --tier dedicated --region edge" },
+    { "type": "out",     "text": "allocating private endpoint  ·  cloudflare in front  ·  flat rate" },
+    { "type": "wait",    "ms": 420 },
+    { "type": "out",     "text": "pulling weights  crowelm  ·  kimi  ·  glm" },
+    { "type": "comment", "text": "# one flat monthly price. no per hour gpu bill to reconcile." },
+    { "type": "wait",    "ms": 320 },
+    { "type": "ok",      "text": "OK    endpoint        https://nimbus.crowelogic.com/v1   p50 1.1s" },
+    { "type": "ok",      "text": "OK    autoscale       burst to demand, idles to zero" },
+    { "type": "ok",      "text": "OK    wired           crowe terminal + foundry cli ready" },
+    { "type": "wait",    "ms": 300 },
+    { "type": "out",     "text": "serving 3 models behind one gateway  ->  exit 0" }
+  ]
+}
