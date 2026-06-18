@@ -14,7 +14,7 @@
   cv.id = 'thought-streams';
   Object.assign(cv.style, {
     position: 'fixed', inset: '0', width: '100%', height: '100%',
-    zIndex: '-2', pointerEvents: 'none', display: 'block',
+    zIndex: '-3', pointerEvents: 'none', display: 'block',
   });
   document.body.prepend(cv);
   const ctx = cv.getContext('2d', { alpha: true });

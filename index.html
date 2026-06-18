@@ -23,9 +23,9 @@
   .tier li::before{content:"+";position:absolute;left:0;color:var(--gold);font-weight:700}
   .tier .btn{width:100%;justify-content:center}
 
-  /* parallel thought-streams canvas sits behind everything; glass refracts it */
-  #thought-streams{position:fixed;inset:0;z-index:-2;pointer-events:none}
-  .aura{z-index:-3}                 /* ambient glow drops behind the streams */
+  /* layering: streams deepest, gold aura spheres above them, both behind glass */
+  #thought-streams{position:fixed;inset:0;z-index:-3;pointer-events:none}
+  .aura{z-index:-2}                 /* gold spheres glow on top of the streams */
 
   /* dark-black header bar (not the translucent glass treatment) */
   .nav.glass{
